@@ -1,0 +1,132 @@
+
+  /* Git-SCM COLOR PALETTE 
+  -AI hjalp meg med fargene valgene ved hjelp av inspirasjoner som git nettsiden og git generelt sett
+  
+  DETTE ER TATT HOVEDSAKELIG FRA GIT-SAMARBEID's OPPGAVEN!
+  
+  
+  */
+   
+:root {
+    --orange: #f14e32;
+    --orange-dark: #ef391a;
+
+    --blue: #009099;
+    --main-font: "'Verdana', 'monaspace'";
+    --text: #4e443c;
+    --text-light: #9a9994;
+
+    --link: #0388a6;
+    --link-hover: #04b1d8;
+
+    --background: #f0efe7;
+    --main-background: #fcfcfa;
+
+    --sidebar: #efefe7;
+    --card: #e9e8e0;
+
+    --border: #d8d7cf;
+    --border-light: #e2e0d8;
+
+    --highlight: #eee0b5;
+}
+/*
+DET NEDENFOR HER BLE
+LAGET VED HJELP AV AI!*/
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 30px 0;
+        background: var(--background);
+        color: var(--text);
+        font-family: var(--main-font);
+        line-height: 1.5;
+    }
+/*
+DET MELLOM KOMMENTAREN OPPE OG DENNE
+HER BLE LAGET VED stor HJELP AV AI!
+IKKE VARIABLENE THOUGH etc.
+*/
+
+
+/* sette nettsiden i midten for bedre viewing experience */
+.main {
+    width: 940px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 30px auto 0;
+    
+}
+/*Få PC'er med komponenter h1 i midtedn av siden (tittel ish)*/
+.container h1{
+    text-align: center;
+    margin: 0 0 10px;
+    color: var(--orange-dark);
+    grid-column: 1 / -1;
+}
+
+/* På små skjermer vises kortene under hverandre */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.stats_holder {
+    padding: 20px;
+
+    background: var(--main-background);
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(78, 68, 60, 0.1);
+}
+
+.stats_holder h2 {
+    margin: 0 0 12px;
+    color: var(--orange);
+}
+
+.stats_holder pre {
+    margin: 0;
+    padding: 12px;
+    overflow-x: auto;
+    background: var(--card);
+    border-left: 4px solid var(--blue);
+}
+
+.stats_holder h3 {
+    margin-top: 0;
+
+    color: var(--orange);
+}
+
+.stats_holder p {
+    margin-bottom: 0;
+}
+
+
+
+p {
+    font-size: 16px;
+}
+
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
