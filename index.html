@@ -3,39 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My machines</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+
+    <title>Git</title>
+
+    <!--<link rel="stylesheet" href="style.css">-->
+</head> 
+<style> /*bra organisert lett og finne frem*/ /*må lage en tilbake knapp for å komme til hovedsiden*/
+/*on it as we speak. Åpne i ny tab*/
+    
+  /* Git-SCM COLOR PALETTE 
+  -AI hjalp meg med fargene
+  */
+   
+:root {
+    --orange: #f14e32;
+    --orange-dark: #ef391a;
+
+    --blue: #009099;
+
+    --text: #4e443c;
+    --text-light: #9a9994;
+
+    --link: #0388a6;
+    --link-hover: #04b1d8;
+
+    --background: #f0efe7;
+    --main-background: #fcfcfa;
+
+    --sidebar: #efefe7;
+    --card: #e9e8e0;
+
+    --border: #d8d7cf;
+    --border-light: #e2e0d8;
+
+    --highlight: #eee0b5;
+} /*bra formatert*/
+/*sigma*/
+
+body {
+    margin: 0; /*trengs for clean header i henhold til dokkumentet*/
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    line-height: 1.6;
+}  
+
+
+/* sette nettsiden i midten for bedre viewing experience */
+
+.container {
+    width: 940px;
+    max-width: 90%;
+
+    margin: 0 auto;
+}
+
+
+/* overskrifter styling ahhh*/
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+h2 {
+    margin-top: 50px;
+
+    font-size: 22px;
+    color: var(--orange);
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+} 
+
+
+header {
+    background: var(--main-background);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Git logo / navn egt*/
+
+.logo {
+    color: var(--orange);
+
+    font-size: 32px;
+    font-weight: bold;
+
+    letter-spacing: -2px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--text);
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+
+
+
+.subtittel {
+    margin-top: 0;
+
+    color: var(--text-light);
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.card {
+    padding: 20px;
+
+    background: var(--main-background);
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 0;
+
+    color: var(--orange);
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+
+.code {
+    padding: 20px;
+
+    background: #333333;
+
+    border: 1px solid #494945;
+    border-radius: 5px;
+
+    overflow-x: auto;
+}
+
+.code code {
+    color: #d7834f;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+code span{
+    color: white;
+}
+
+.fargeboks{
+    width: 100%;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+} 
+
+
+</style>
 <body>
-    <div class="main">
-        <div class="container">
-            <h1>PC'er Med komponenter</h1>
-            <div class="stats_holder">
-                <h2>PC HJEMME</h2>
-                <pre> <!--4 tabs fra [eks: navn]-->
-OS:             Arch Linux x86_64
-GPU:            NVIDIA RTX 4060 ti <!--Forkortet litt for bedre looks-->
-CPU:            i5-14400f (12+4) @ 4.70GHz <!--skrev fra fastfetch linux så ig det kanskje kan skrives sånn?-->
-                </pre>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">git</a>
+
+            <nav>
+                <a href="https://git-scm.com/" target="_blank">Inspirasjon</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="container">
+            <!-- Cards -->
+            <div class="cards">          
+                <div class="card">
+                    <h3>Hva er Git?</h3>
+                    <p>
+                    Git er et distribuert versjonskontrollsystem som brukes til å 
+                    spore endringer i kildekode og andre filer over tid    
+                    </p> 
+                </div> <!-- bra med informasjon-->
+                <!--takk-->
+
+                <div class="card">
+                    <h3>GitHub</h3>
+                    <p>
+                        GitHub er en skybasert nettside
+                        og plattform der utviklere 
+                        lagrer, deler og samarbeider om programvare
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Git Bash</h3>
+                    <p>
+                        Git Bash er et program for Windows som gir deg en 
+                        ledetekst (terminal) med støtte for både Git-kommander og Unix-likende kommandoer
+                    </p>
+                </div>
             </div>
-                        <div class="stats_holder">
-                <h2>Skole PC'n</h2>
-                <pre>
-OS:             WINDOWS 11
-GPU:            Integrated Graphics
-CPU:            Intel Core Ultra 5 125H (14C/18T, 1.2 GHz)<!--brukte systeminfo som ble forkortet ved gemini-->
-                </pre>
+
+
+            <div>
+                <h2>Basic Bash commands</h2>
+
+                <div class="code">
+                    <code>
+                        pwd <span>— Print working directory. Shows your current path.</span><br>
+                        ls <span>— List directory contents. Lists files and folders.</span><br>
+                        ls -la <span>— Detailed list. Shows hidden files and file details.</span><br>
+                        cd [dir] <span>— <span></span>Change directory. Moves to a specified folder.</span><br>
+                        cd .. <span>— Move up. Navigates to the parent directory.</span><br>
+                            cd ~ <span>— Home directory. Instantly returns to your home</span>
+                    </code>
+                </div>
             </div>
-                        <div class="stats_holder">
-                <h2>KOMMER ...</h2>
-                <pre>
-OS:             
-GPU:
-CPU:
-etc. minne??
-                </pre>
+            
+
+            <div>
+                <h2>Basic Git commands</h2>
+
+                <div class="code">
+                    <code>
+                        git init <span>— Initialiserer et nytt Git-repositorium.</span><br>
+                        git add . <span>— Gjør alle endringer klare for neste commit.</span><br>
+                        git commit -m "Initial commit" <span>— Lagrer endringene med en beskrivende melding.</span><br>
+                        git push <span>— Laster opp commitene dine til et eksternt repositorium.</span>
+                    </code>
+                </div>
+            </div>
+            <br><br>
+        <div>
+            <h1>GIT i VS-Code</h1>
+                <img src="img/Skjermbilde 2026-08-26 215647.png" style="height: 600px; width: auto;"" alt="">
+                    <p>det er mer intuitivt å bare klikke i vscode, som du kan se på vedlagt bilde ovenfor. (Bare commit rett der..)
+                        enn det er å bruke git Bash som du kan se nedenfor.
+                    </p>
+                <img src="img/Skjermbilde 2026-08-26 220811.png" style="height: 600px; width: auto;"" alt="">
+                
+        </div>
+        <h1>Hva er en .md fil?</h1>
+        <p>det er en markdown fil, et enkelt tekst dokument som formaterer tekst på en clean måte! <br>
+            jeg har tatt med en readme.md fil som man kan ha på github repo'ene sine for å forklare hva de er om.. <br>
+            OBS! hele readme'en er laget av AI, dette er noe jeg ikke kan i det hele tatt.
+        </p>
+        <p>md filer er vell mest brukt innenfor dokumentasjon vil jeg si.</p>
+    </main>
+
+    <!--Dokumentasjon-->
+    <div class="container palette">
+           
+        <h1>Fargepallet</h1>
+        <div class="palette-item">
+            
+            <div class="fargeboks" style="background-color: #efefe7;">
+                <h3>#efefe7</h3>
             </div>
         </div>
+        <div class="palette-item">
+            <div class="fargeboks" style="background-color: #d8d7cf;">
+                <h3>#d8d7cf</h3>
+            </div>
+        </div>
+        <div class="palette-item">
+            <div class="fargeboks" style="background-color: #4e443c;">
+                <h3 style="color: white;">#4e443c</h3>
+            </div>
+
+            
+        </div>
+        <div class="palette-item">
+            <div class="fargeboks" style="background-color: #f0efe7;">
+                <h3>#f0efe7</h3>
+            </div>
+        </div>
+        <div class="palette-item">
+            <div class="fargeboks" style="background-color: #f14e32;">
+                <h3>#f14e32</h3>
+            </div>
+        </div> <!-- bra mengde kommentarer lett og vite hva som er hva-->
+        
     </div>
-</body>
+    <div class="container">
+        <h1>Wireframe</h1>
+        <p>itererte mye etter denne, jeg måtte bare se en del på insiprasjon for siden etterpå (ikke særlig smart)</p>
+        <img src="img/IMG_20260826_221852.jpg" style="height: auto; width: 400px;" alt="">
+    
+    </div>
+  
+</body> <!-- bra med bilder -->
 </html>
