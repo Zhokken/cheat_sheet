@@ -108,3 +108,7 @@ Dette gjør komponenten fleksibel: noen kort kan ha ekstra tekst, mens andre bar
 | Betinget rendering | Vise innhold bare når det finnes |
 
 Disse teknikkene gjør det enkelt å utvide cheat sheet-et. For å lage et nytt kort kan du vanligvis bare legge til et nytt objekt i riktig array.
+
+## Merknad
+
+Jeg har brukt AI til å formatere denne README.md-filen.
